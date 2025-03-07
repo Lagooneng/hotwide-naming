@@ -1,3 +1,9 @@
+<?php
+// index.php
+// 브라우저에 UTF-8 인코딩과 HTML 컨텐츠 타입을 전달
+header("Content-Type: text/html; charset=utf-8");
+?>
+
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -83,7 +89,7 @@
                 </header>
                 <!-- 메인 콘텐츠 (모든 입력 요소를 하나의 form에 포함) -->
                 <main class="container mx-auto p-8">
-                    <form action="/submit-url" method="POST">
+                    <form action="/nameLoading.php" method="POST">
                         <!-- 네이밍 제목 및 배너 -->
                         <div>
                             <div class="mr-5 md:mr-10 mb-5">
@@ -747,7 +753,7 @@
                                     </div>
                                 </label>
 
-                                
+
                             </div>
 
                             <!-- 직접 추가하기 버튼 -->
@@ -778,7 +784,7 @@
 
                             <!-- 기존 브랜드 가치 체크박스 영역 -->
                             <div id="trendContainer" class="flex flex-wrap gap-2 mb-4">
-                                 <!-- 예시 체크박스 (미리 정의된 트렌드) -->
+                                <!-- 예시 체크박스 (미리 정의된 트렌드) -->
                                 <label class="cursor-pointer">
                                     <input type="checkbox" name="language_styles[]" value="프리미엄" class="hidden peer" />
                                     <div
@@ -884,8 +890,8 @@
                                         <span class="text-sm">AI</span>
                                     </div>
                                 </label>
-                                
-                                                                
+
+
                             </div>
 
                             <!-- 직접 추가하기 버튼 -->
@@ -918,97 +924,97 @@
                             <div id="languageStyleContainer" class="flex flex-wrap gap-2 mb-4">
                                 <!-- 예시 체크박스 (미리 정의된 언어 스타일) -->
                                 <label class="cursor-pointer">
-                                    <input type="checkbox" name="trends[]" value="순우리말" class="hidden peer" />
+                                    <input type="checkbox" name="language_styles[]" value="순우리말" class="hidden peer" />
                                     <div
                                         class="inline-flex items-center px-3 py-2 bg-gray-100 rounded transition peer-checked:bg-blue-100 peer-checked:text-noir">
                                         <span class="text-sm">순우리말</span>
                                     </div>
                                 </label>
                                 <label class="cursor-pointer">
-                                    <input type="checkbox" name="trends[]" value="한자어" class="hidden peer" />
+                                    <input type="checkbox" name="language_styles[]" value="한자어" class="hidden peer" />
                                     <div
                                         class="inline-flex items-center px-3 py-2 bg-gray-100 rounded transition peer-checked:bg-blue-100 peer-checked:text-noir">
                                         <span class="text-sm">한자어</span>
                                     </div>
                                 </label>
                                 <label class="cursor-pointer">
-                                    <input type="checkbox" name="trends[]" value="영어식" class="hidden peer" />
+                                    <input type="checkbox" name="language_styles[]" value="영어식" class="hidden peer" />
                                     <div
                                         class="inline-flex items-center px-3 py-2 bg-gray-100 rounded transition peer-checked:bg-blue-100 peer-checked:text-noir">
                                         <span class="text-sm">영어식</span>
                                     </div>
                                 </label>
                                 <label class="cursor-pointer">
-                                    <input type="checkbox" name="trends[]" value="프랑스식" class="hidden peer" />
+                                    <input type="checkbox" name="language_styles[]" value="프랑스식" class="hidden peer" />
                                     <div
                                         class="inline-flex items-center px-3 py-2 bg-gray-100 rounded transition peer-checked:bg-blue-100 peer-checked:text-noir">
                                         <span class="text-sm">프랑스식</span>
                                     </div>
                                 </label>
                                 <label class="cursor-pointer">
-                                    <input type="checkbox" name="trends[]" value="독일식" class="hidden peer" />
+                                    <input type="checkbox" name="language_styles[]" value="독일식" class="hidden peer" />
                                     <div
                                         class="inline-flex items-center px-3 py-2 bg-gray-100 rounded transition peer-checked:bg-blue-100 peer-checked:text-noir">
                                         <span class="text-sm">독일식</span>
                                     </div>
                                 </label>
                                 <label class="cursor-pointer">
-                                    <input type="checkbox" name="trends[]" value="이태리식" class="hidden peer" />
+                                    <input type="checkbox" name="language_styles[]" value="이태리식" class="hidden peer" />
                                     <div
                                         class="inline-flex items-center px-3 py-2 bg-gray-100 rounded transition peer-checked:bg-blue-100 peer-checked:text-noir">
                                         <span class="text-sm">이태리식</span>
                                     </div>
                                 </label>
                                 <label class="cursor-pointer">
-                                    <input type="checkbox" name="trends[]" value="스페인식" class="hidden peer" />
+                                    <input type="checkbox" name="language_styles[]" value="스페인식" class="hidden peer" />
                                     <div
                                         class="inline-flex items-center px-3 py-2 bg-gray-100 rounded transition peer-checked:bg-blue-100 peer-checked:text-noir">
                                         <span class="text-sm">스페인식</span>
                                     </div>
                                 </label>
                                 <label class="cursor-pointer">
-                                    <input type="checkbox" name="trends[]" value="일본식" class="hidden peer" />
+                                    <input type="checkbox" name="language_styles[]" value="일본식" class="hidden peer" />
                                     <div
                                         class="inline-flex items-center px-3 py-2 bg-gray-100 rounded transition peer-checked:bg-blue-100 peer-checked:text-noir">
                                         <span class="text-sm">일본식</span>
                                     </div>
                                 </label>
                                 <label class="cursor-pointer">
-                                    <input type="checkbox" name="trends[]" value="라틴식" class="hidden peer" />
+                                    <input type="checkbox" name="language_styles[]" value="라틴식" class="hidden peer" />
                                     <div
                                         class="inline-flex items-center px-3 py-2 bg-gray-100 rounded transition peer-checked:bg-blue-100 peer-checked:text-noir">
                                         <span class="text-sm">라틴식</span>
                                     </div>
                                 </label>
                                 <label class="cursor-pointer">
-                                    <input type="checkbox" name="trends[]" value="그리스식" class="hidden peer" />
+                                    <input type="checkbox" name="language_styles[]" value="그리스식" class="hidden peer" />
                                     <div
                                         class="inline-flex items-center px-3 py-2 bg-gray-100 rounded transition peer-checked:bg-blue-100 peer-checked:text-noir">
                                         <span class="text-sm">그리스식</span>
                                     </div>
                                 </label>
                                 <label class="cursor-pointer">
-                                    <input type="checkbox" name="trends[]" value="포르투갈식" class="hidden peer" />
+                                    <input type="checkbox" name="language_styles[]" value="포르투갈식" class="hidden peer" />
                                     <div
                                         class="inline-flex items-center px-3 py-2 bg-gray-100 rounded transition peer-checked:bg-blue-100 peer-checked:text-noir">
                                         <span class="text-sm">포르투갈식</span>
                                     </div>
                                 </label>
                                 <label class="cursor-pointer">
-                                    <input type="checkbox" name="trends[]" value="스웨덴식" class="hidden peer" />
+                                    <input type="checkbox" name="language_styles[]" value="스웨덴식" class="hidden peer" />
                                     <div
                                         class="inline-flex items-center px-3 py-2 bg-gray-100 rounded transition peer-checked:bg-blue-100 peer-checked:text-noir">
                                         <span class="text-sm">스웨덴식</span>
                                     </div>
                                 </label>
                                 <label class="cursor-pointer">
-                                    <input type="checkbox" name="trends[]" value="아프리카식" class="hidden peer" />
+                                    <input type="checkbox" name="language_styles[]" value="아프리카식" class="hidden peer" />
                                     <div
                                         class="inline-flex items-center px-3 py-2 bg-gray-100 rounded transition peer-checked:bg-blue-100 peer-checked:text-noir">
                                         <span class="text-sm">아프리카식</span>
                                     </div>
                                 </label>
-                                                                
+
                             </div>
 
                             <!-- 직접 추가하기 버튼 -->
@@ -1027,7 +1033,7 @@
                                 </button>
                             </div>
                         </div>
-                        
+
                         <!-- 제출 버튼 -->
                         <div class="p-4 flex justify-end">
                             <button type="submit" class="mt-4 px-4 py-2 bg-blue-500 text-white rounded">
@@ -1335,7 +1341,59 @@
             }
         });
     </script>
+    <!-- 언어 스타일 -->
+    <script>
+        // '직접 추가하기' 버튼을 클릭하면 입력창 보이기
+        document.getElementById("addLanguageStyleBtn").addEventListener("click", function () {
+            document.getElementById("languageStyleInputWrapper").classList.remove("hidden");
+        });
 
+        // '추가' 버튼을 클릭하면 입력된 값으로 체크박스 생성
+        document.getElementById("saveLanguageStyleBtn").addEventListener("click", function () {
+            var value = document.getElementById("languageStyleInput").value.trim();
+            if (value !== "") {
+                var container = document.getElementById("languageStyleContainer");
+
+                // 새로운 라벨과 체크박스 요소 생성
+                var label = document.createElement("label");
+                label.classList.add("cursor-pointer");
+
+                var input = document.createElement("input");
+                input.type = "checkbox";
+                input.name = "language_styles[]";
+                input.value = value;
+                input.classList.add("hidden", "peer");
+
+                var div = document.createElement("div");
+                div.classList.add("inline-flex", "items-center", "px-3", "py-2", "bg-gray-100", "rounded", "transition", "peer-checked:bg-blue-100", "peer-checked:text-noir");
+
+                var span = document.createElement("span");
+                span.classList.add("text-sm");
+                span.textContent = value;
+
+                // 요소 조립
+                div.appendChild(span);
+                label.appendChild(input);
+                label.appendChild(div);
+                container.appendChild(label);
+
+                // 입력창 초기화 및 숨기기
+                document.getElementById("languageStyleInput").value = "";
+                document.getElementById("languageStyleWrapper").classList.add("hidden");
+            }
+        });
+
+        // 체크박스가 변경될 때마다 선택 개수 확인 (최대 3개)
+        document.getElementById("languageStyleContainer").addEventListener("change", function (e) {
+            if (e.target && e.target.type === "checkbox") {
+                var checkedCount = document.querySelectorAll('input[name="language_styles[]"]:checked').length;
+                if (checkedCount > 3) {
+                    alert("최대 3개까지만 선택 가능합니다.");
+                    e.target.checked = false;
+                }
+            }
+        });
+    </script>
 </body>
 
 </html>
